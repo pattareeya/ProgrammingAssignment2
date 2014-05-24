@@ -1,8 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-
 ## This function creates a special "matrix" object that can cache its inverse
-##
+## Assuming that the matrix is always invertible
+
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -11,7 +9,7 @@ makeCacheMatrix <- function(x = matrix()) {
         m <<- NULL
     }
     get <- function() x
-    setinverse <- function(matrix1) m <<- matrix1 #<<- operation pass the value out to the child function
+    setinverse <- function(matrix1) m <<- matrix1 
     getinverse <- function() m
     list(set = set, get = get,
          setinverse = setinverse,
